@@ -6,7 +6,7 @@
   <title>German Hernandez Lopez | Software Architecture, AI & Engineering</title>
   <meta
     name="description"
-    content="Portfolio CV de German Hernandez Lopez. Arquitectura de software, desarrollo backend, fintech, cloud e IA aplicada."
+    content="Portfolio CV de German Hernandez Lopez. Arquitectura de software, backend, automatización de software e IA aplicada."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,8 +30,8 @@ graph LR
   agent-->memory
   memory-->tooling
   tooling-->deploy
-k8s.cluster.apply("prod-control-plane")
-terraform.plan("fintech-platform")
+cypress.run("critical-user-flows")
+prompt.execute("generate-test-scenarios")
 event_bus.publish("user.onboarded")
 llm.reason(context, constraints, tools)
   </div>
@@ -74,9 +74,11 @@ llm.reason(context, constraints, tools)
       </a>
 
       <nav class="nav-links">
+        <a href="#downloads" data-i18n="navDownloads">PDF</a>
         <a href="#about" data-i18n="navAbout">Perfil</a>
         <a href="#experience" data-i18n="navExperience">Experiencia</a>
         <a href="#expertise" data-i18n="navExpertise">Especialidad</a>
+        <a href="#services" data-i18n="navServices">Servicios</a>
         <a href="#contact" data-i18n="navContact">Contacto</a>
       </nav>
 
@@ -90,9 +92,11 @@ llm.reason(context, constraints, tools)
     </header>
 
     <div class="mobile-panel" id="mobilePanel" hidden>
+      <a href="#downloads" data-i18n="navDownloads">PDF</a>
       <a href="#about" data-i18n="navAbout">Perfil</a>
       <a href="#experience" data-i18n="navExperience">Experiencia</a>
       <a href="#expertise" data-i18n="navExpertise">Especialidad</a>
+      <a href="#services" data-i18n="navServices">Servicios</a>
       <a href="#contact" data-i18n="navContact">Contacto</a>
     </div>
 
@@ -100,7 +104,7 @@ llm.reason(context, constraints, tools)
       <section class="hero panel" id="hero">
         <div class="hero-copy" data-aos="fade-up">
           <div class="eyebrow" data-i18n="eyebrow">Control plane · agent orchestration · enterprise backend</div>
-          <h1 data-i18n="heroTitle">Arquitectura para sistemas vivos.</h1>
+          <h1 data-i18n="heroTitle">No diseño software. Diseño sistemas que piensan, reaccionan y escalan.</h1>
           <p class="hero-summary" data-i18n="heroSummary">
             Arquitecto de software y líder técnico con más de 10 años de experiencia en fintech, pagos,
             onboarding digital, modernización de plataformas y delivery de productos backend con enfoque
@@ -126,8 +130,8 @@ llm.reason(context, constraints, tools)
             </article>
             <article class="signal-card" data-aos="fade-up" data-aos-delay="120">
               <span class="signal-label">02</span>
-              <h2 data-i18n="signal2Title">Fintech + Cloud + Reliability</h2>
-              <p data-i18n="signal2Text">Experiencia en onboarding, pagos, microservicios, AWS, Kubernetes y Terraform.</p>
+              <h2 data-i18n="signal2Title">Fintech + QA + Reliability</h2>
+              <p data-i18n="signal2Text">Experiencia en onboarding, pagos, calidad funcional, pruebas E2E y automatización de software.</p>
             </article>
             <article class="signal-card" data-aos="fade-up" data-aos-delay="180">
               <span class="signal-label">03</span>
@@ -285,9 +289,9 @@ llm.reason(context, constraints, tools)
                 <span>n8n://agent-orchestrator/runtime</span>
               </div>
               <pre class="terminal-body"><code>stack.core = java | go | python
-cloud.runtime = aws | kubernetes | terraform
+qa.automation = cypress | e2e | quality-flows
 focus.mode = architecture + backend + ai
-delivery.style = product-minded + hands-on
+delivery.style = prompts + agents + hands-on
 graph.state = stable / observable / scalable</code></pre>
             </div>
           </div>
@@ -410,6 +414,24 @@ graph.state = stable / observable / scalable</code></pre>
             </div>
           </div>
           <div class="expertise-grid" id="expertiseGrid"></div>
+        </section>
+
+        <section class="panel services-panel" id="services" data-aos="fade-up" data-aos-delay="40">
+          <div class="section-route-card route-services">
+            <span class="graph-overlay-label" data-i18n="routeServicesLabel">service graph</span>
+            <strong data-i18n="routeServicesTitle">architecture / delivery / ai enablement</strong>
+            <small data-i18n="routeServicesMeta">diagnose -> design -> execute</small>
+          </div>
+          <div class="section-head">
+            <div>
+              <span class="section-kicker" data-i18n="servicesKicker">Services</span>
+              <h2 data-i18n="servicesTitle">Servicios prestados</h2>
+            </div>
+            <p data-i18n="servicesText">
+              Servicios orientados a arquitectura, modernización, delivery backend y adopción práctica de IA en ingeniería.
+            </p>
+          </div>
+          <div class="services-grid" id="servicesGrid"></div>
         </section>
 
         <section class="panel contact-panel" id="contact" data-aos="fade-up" data-aos-delay="80">

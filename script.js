@@ -41,9 +41,9 @@ const RESUME_DATA = {
       "Software Architecture",
       "Backend Engineering",
       "Fintech & Payments",
-      "Cloud-Native Systems",
-      "Terraform / IaC",
-      "Kubernetes / EKS",
+      "Software Automation",
+      "QA Automation / Cypress",
+      "Agent Workflows",
       "Technical Leadership",
       "AI-Oriented Engineering",
       "Prompt Engineering",
@@ -53,13 +53,67 @@ const RESUME_DATA = {
       "Software Architecture",
       "Backend Engineering",
       "Fintech & Payments",
-      "Cloud-Native Systems",
-      "Terraform / IaC",
-      "Kubernetes / EKS",
+      "Software Automation",
+      "QA Automation / Cypress",
+      "Agent Workflows",
       "Technical Leadership",
       "AI-Oriented Engineering",
       "Prompt Engineering",
       "MCP / Agent Tooling",
+    ],
+  },
+  services: {
+    es: [
+      {
+        title: "Arquitectura de Software",
+        text: "Diseño de arquitectura, definición de componentes, límites del sistema, tradeoffs técnicos y hojas de ruta para plataformas nuevas o en evolución.",
+      },
+      {
+        title: "Modernización de Plataformas",
+        text: "Estrategias para migración de legados, modularización progresiva, evolución de backend enterprise y reducción de deuda técnica.",
+      },
+      {
+        title: "Backend & APIs",
+        text: "Diseño e implementación de servicios backend, APIs, integraciones empresariales, microservicios y componentes orientados a confiabilidad.",
+      },
+      {
+        title: "Fintech & Payments",
+        text: "Acompañamiento técnico para onboarding digital, validación de identidad, pagos, P2P, QR, links de pago y plataformas transaccionales.",
+      },
+      {
+        title: "Automatización de Software",
+        text: "Automatización de pruebas y procesos de software con enfoque en calidad, cobertura funcional, flujos E2E, Cypress y aceleración del delivery.",
+      },
+      {
+        title: "IA Aplicada a Ingeniería",
+        text: "Adopción de agentes de IA, prompt engineering, MCP, Cursor, Windsurf y workflows asistidos para acelerar diseño y ejecución técnica.",
+      },
+    ],
+    en: [
+      {
+        title: "Software Architecture",
+        text: "Architecture design, component definition, system boundaries, technical tradeoffs and roadmaps for new or evolving platforms.",
+      },
+      {
+        title: "Platform Modernization",
+        text: "Strategies for legacy migration, progressive modularization, enterprise backend evolution and technical debt reduction.",
+      },
+      {
+        title: "Backend & APIs",
+        text: "Design and implementation of backend services, APIs, enterprise integrations, microservices and reliability-oriented components.",
+      },
+      {
+        title: "Fintech & Payments",
+        text: "Technical support for digital onboarding, identity validation, payments, P2P, QR, payment links and transactional platforms.",
+      },
+      {
+        title: "Software Automation",
+        text: "Test and software process automation focused on quality, functional coverage, E2E flows, Cypress and faster delivery.",
+      },
+      {
+        title: "AI Applied to Engineering",
+        text: "Adoption of AI agents, prompt engineering, MCP, Cursor, Windsurf and assisted workflows to accelerate design and execution.",
+      },
     ],
   },
 };
@@ -67,22 +121,24 @@ const RESUME_DATA = {
 const UI_TEXT = {
   es: {
     brandTag: "Agent Orchestration / Software / AI",
+    navDownloads: "PDF",
     navAbout: "Perfil",
     navExperience: "Experiencia",
     navExpertise: "Especialidad",
+    navServices: "Servicios",
     navContact: "Contacto",
     menu: "Menú",
     eyebrow: "Control plane · orquestación de agentes · backend enterprise",
     heroTitle: "No diseño software. Diseño sistemas que piensan, reaccionan y escalan.",
-    heroSummary: "Arquitecto de software y líder técnico con más de 10 años de experiencia en fintech, pagos, onboarding digital, modernización de plataformas y delivery backend. Mi enfoque mezcla arquitectura, automatización, observabilidad, ecosistema Java y mentalidad de sistemas para construir plataformas listas para escalar.",
+    heroSummary: "Arquitecto de software y líder técnico con más de 10 años de experiencia en fintech, pagos, onboarding digital, modernización de plataformas y delivery backend. Mi enfoque mezcla arquitectura, automatización de software, prompts para IA, ecosistema Java y mentalidad de sistemas para construir plataformas listas para escalar.",
     heroPrimary: "Descargar CV",
     heroSecondary: "Hablemos",
     signal1Title: "Architecture-first delivery",
     signal1Text: "Conecto intención de negocio, decisiones técnicas y ejecución hands-on como un workflow operable.",
-    signal2Title: "Fintech + Cloud + Reliability",
-    signal2Text: "Experiencia en onboarding, pagos, microservicios, AWS, Kubernetes y Terraform.",
+    signal2Title: "Fintech + QA + Reliability",
+    signal2Text: "Experiencia en onboarding, pagos, calidad funcional, pruebas E2E y automatización de software.",
     signal3Title: "AI-enabled engineering",
-    signal3Text: "Automatización, flujos tipo n8n, agentes y uso práctico de IA en ingeniería.",
+    signal3Text: "Prompts, agentes, MCP, Cursor, Windsurf y automatización aplicada a ingeniería de software.",
     boardNode1: "Ingreso de eventos de negocio",
     boardNode1Meta: "webhook / queue / schedule",
     boardNode2: "Razonamiento arquitectónico",
@@ -129,8 +185,14 @@ const UI_TEXT = {
     stackKicker: "Stack",
     stackTitle: "Stack técnico y capacidades",
     routeExpertiseLabel: "stack map",
-    routeExpertiseTitle: "runtime / cloud / orchestration",
-    routeExpertiseMeta: "languages -> platform -> reliability",
+    routeExpertiseTitle: "runtime / qa / ai orchestration",
+    routeExpertiseMeta: "languages -> testing -> agent workflows",
+    servicesKicker: "Services",
+    servicesTitle: "Servicios prestados",
+    servicesText: "Servicios orientados a arquitectura, modernización, automatización de software y adopción práctica de IA en ingeniería.",
+    routeServicesLabel: "service graph",
+    routeServicesTitle: "architecture / delivery / ai enablement",
+    routeServicesMeta: "diagnose -> design -> execute",
     contactKicker: "Contact",
     contactTitle: "Contacto",
     routeContactLabel: "contact channel",
@@ -140,7 +202,7 @@ const UI_TEXT = {
     contactLocationValue: "Tlaxcala, México",
     contactPhoneLabel: "Teléfono",
     contactEmailLabel: "Correo",
-    contactNote: "Español nativo. Inglés profesional en fortalecimiento. Interés constante en arquitectura de software, automatización, ciencia, hardware de alto desempeño e IA aplicada.",
+    contactNote: "Español nativo. Inglés profesional en fortalecimiento. Interés constante en arquitectura de software, automatización de pruebas, prompts para IA, ciencia y hardware de alto desempeño.",
     footer: "Diseñado para GitHub Pages con enfoque editorial, técnico y bilingüe.",
     pdfStatusShort: "Generando CV ejecutivo",
     pdfStatusLong: "Generando CV extendido",
@@ -154,26 +216,28 @@ const UI_TEXT = {
     pdfSectionContact: "Contacto",
     pdfFooter: "Disponible en web en español e inglés. PDF optimizado para A4.",
     pdfEducation: "Ingeniería en Tecnologías de la Información y Comunicaciones · Instituto Tecnológico de Apizaco",
-    pdfDomains: "Fintech, onboarding digital, validación de identidad, pagos, P2P, QR, payment links, banca, modernización Java, cloud, Terraform, prompt engineering, MCP y automatización orientada a IA.",
+    pdfDomains: "Fintech, onboarding digital, validación de identidad, pagos, P2P, QR, payment links, banca, modernización Java, automatización de software, Cypress, prompt engineering, MCP y agentes de IA.",
   },
   en: {
     brandTag: "Agent Orchestration / Software / AI",
+    navDownloads: "PDF",
     navAbout: "Profile",
     navExperience: "Experience",
     navExpertise: "Expertise",
+    navServices: "Services",
     navContact: "Contact",
     menu: "Menu",
     eyebrow: "Control plane · agent orchestration · enterprise backend",
     heroTitle: "I do not design software. I design systems that think, react and scale.",
-    heroSummary: "Software architect and technical lead with 10+ years of experience across fintech, payments, digital onboarding, platform modernization and backend delivery. My approach blends architecture, automation, observability, the Java ecosystem and systems thinking to build platforms ready to scale.",
+    heroSummary: "Software architect and technical lead with 10+ years of experience across fintech, payments, digital onboarding, platform modernization and backend delivery. My approach blends architecture, software automation, AI prompts, the Java ecosystem and systems thinking to build platforms ready to scale.",
     heroPrimary: "Download resume",
     heroSecondary: "Let's talk",
     signal1Title: "Architecture-first delivery",
     signal1Text: "I connect business intent, technical decisions and hands-on execution as an operable workflow.",
-    signal2Title: "Fintech + Cloud + Reliability",
-    signal2Text: "Experience across onboarding, payments, microservices, AWS, Kubernetes and Terraform.",
+    signal2Title: "Fintech + QA + Reliability",
+    signal2Text: "Experience across onboarding, payments, functional quality, E2E testing and software automation.",
     signal3Title: "AI-enabled engineering",
-    signal3Text: "Automation, n8n-style flows, agents and practical AI usage in engineering.",
+    signal3Text: "Prompts, agents, MCP, Cursor, Windsurf and practical automation for software engineering.",
     boardNode1: "Business event intake",
     boardNode1Meta: "webhook / queue / schedule",
     boardNode2: "Architecture reasoning",
@@ -220,8 +284,14 @@ const UI_TEXT = {
     stackKicker: "Stack",
     stackTitle: "Technical stack and capabilities",
     routeExpertiseLabel: "stack map",
-    routeExpertiseTitle: "runtime / cloud / orchestration",
-    routeExpertiseMeta: "languages -> platform -> reliability",
+    routeExpertiseTitle: "runtime / qa / ai orchestration",
+    routeExpertiseMeta: "languages -> testing -> agent workflows",
+    servicesKicker: "Services",
+    servicesTitle: "Professional services",
+    servicesText: "Services focused on architecture, modernization, software automation and practical AI adoption for engineering teams.",
+    routeServicesLabel: "service graph",
+    routeServicesTitle: "architecture / delivery / ai enablement",
+    routeServicesMeta: "diagnose -> design -> execute",
     contactKicker: "Contact",
     contactTitle: "Contact",
     routeContactLabel: "contact channel",
@@ -231,7 +301,7 @@ const UI_TEXT = {
     contactLocationValue: "Tlaxcala, Mexico",
     contactPhoneLabel: "Phone",
     contactEmailLabel: "Email",
-    contactNote: "Native Spanish speaker. Professional English in progress. Ongoing interest in software architecture, automation, science, high-performance hardware and applied AI.",
+    contactNote: "Native Spanish speaker. Professional English in progress. Ongoing interest in software architecture, test automation, AI prompts, science and high-performance hardware.",
     footer: "Built for GitHub Pages with an editorial, technical and bilingual approach.",
     pdfStatusShort: "Generating executive resume",
     pdfStatusLong: "Generating extended resume",
@@ -245,7 +315,7 @@ const UI_TEXT = {
     pdfSectionContact: "Contact",
     pdfFooter: "Available on the website in Spanish and English. PDF optimized for A4.",
     pdfEducation: "Information and Communications Technology Engineering · Instituto Tecnológico de Apizaco",
-    pdfDomains: "Fintech, digital onboarding, identity validation, payments, P2P, QR, payment links, banking, Java modernization, cloud, Terraform, prompt engineering, MCP and AI-oriented automation.",
+    pdfDomains: "Fintech, digital onboarding, identity validation, payments, P2P, QR, payment links, banking, Java modernization, software automation, Cypress, prompt engineering, MCP and AI agents.",
   },
 };
 
@@ -258,14 +328,14 @@ RESUME_DATA.expertise = {
       title: "Backend & Architecture",
       text: "Java, Go, Python, REST APIs, microservices, integración empresarial, diseño de componentes y sistemas distribuidos.",
     },
-    {
-      title: "Java Ecosystem",
-      text: "Spring Boot, Spring MVC, Spring WebFlux, Spring Data JPA, Spring Security, Hibernate, JPA, Maven, Gradle, Spring Cloud, Feign, Resilience4j, Kafka Streams y testing enterprise.",
-    },
-    {
-      title: "Cloud & Delivery",
-      text: "AWS, Cognito, S3, Lambda, Kubernetes, EKS, Terraform, GitHub Actions y CI/CD.",
-    },
+      {
+        title: "Java Ecosystem",
+        text: "Spring Boot, Spring MVC, Spring WebFlux, Spring Data JPA, Spring Security, Hibernate, JPA, Maven, Gradle, Spring Cloud, Feign, Resilience4j, Kafka Streams y testing enterprise.",
+      },
+      {
+        title: "Testing & Quality Automation",
+        text: "Cypress, automatización E2E, pruebas funcionales, validación de flujos críticos, calidad continua y soporte al release de software.",
+      },
     {
       title: "Data, Messaging & Quality",
       text: "MongoDB, Oracle, Redis, Kafka, RabbitMQ, JUnit 4/5, SOLID, Clean Code y diseño mantenible.",
@@ -284,14 +354,14 @@ RESUME_DATA.expertise = {
       title: "Backend & Architecture",
       text: "Java, Go, Python, REST APIs, microservices, enterprise integration, component design and distributed systems.",
     },
-    {
-      title: "Java Ecosystem",
-      text: "Spring Boot, Spring MVC, Spring WebFlux, Spring Data JPA, Spring Security, Hibernate, JPA, Maven, Gradle, Spring Cloud, Feign, Resilience4j, Kafka Streams and enterprise testing.",
-    },
-    {
-      title: "Cloud & Delivery",
-      text: "AWS, Cognito, S3, Lambda, Kubernetes, EKS, Terraform, GitHub Actions and CI/CD.",
-    },
+      {
+        title: "Java Ecosystem",
+        text: "Spring Boot, Spring MVC, Spring WebFlux, Spring Data JPA, Spring Security, Hibernate, JPA, Maven, Gradle, Spring Cloud, Feign, Resilience4j, Kafka Streams and enterprise testing.",
+      },
+      {
+        title: "Testing & Quality Automation",
+        text: "Cypress, E2E automation, functional testing, critical flow validation, continuous quality and support for software releases.",
+      },
     {
       title: "Data, Messaging & Quality",
       text: "MongoDB, Oracle, Redis, Kafka, RabbitMQ, JUnit 4/5, SOLID, Clean Code and maintainable design.",
@@ -445,6 +515,20 @@ function renderExpertise(lang) {
     .join("");
 }
 
+function renderServices(lang) {
+  const target = qs("#servicesGrid");
+  target.innerHTML = RESUME_DATA.services[lang]
+    .map(
+      (item) => `
+        <article class="service-card">
+          <h3>${item.title}</h3>
+          <p>${item.text}</p>
+        </article>
+      `
+    )
+    .join("");
+}
+
 function updateStaticText(lang) {
   document.documentElement.lang = lang;
   document.title =
@@ -471,6 +555,7 @@ function renderApp(lang) {
   renderFocus(lang);
   renderExperience(lang);
   renderExpertise(lang);
+  renderServices(lang);
 }
 
 function setButtonsDisabled(disabled, label = "") {
@@ -550,11 +635,11 @@ function buildResumeDocument(lang, variant) {
         ["3+", "formal architecture"],
         ["12", "people led"],
       ];
-  const stackLine = "java / go / python / aws / kubernetes / terraform";
+  const stackLine = "java / go / python / cypress / prompts / mcp";
   const architectureLine =
     lang === "es"
-      ? "system design / fintech / onboarding / payments / observability"
-      : "system design / fintech / onboarding / payments / observability";
+      ? "system design / fintech / testing / ai instructions / agent workflows"
+      : "system design / fintech / testing / ai instructions / agent workflows";
 
   return `
     <div class="pdf-root pdf-${variant}">

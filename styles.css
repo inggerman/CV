@@ -409,7 +409,8 @@ main {
 .download-grid,
 .contact-grid,
 .workflow-grid,
-.expertise-grid {
+.expertise-grid,
+.services-grid {
   display: grid;
   gap: 14px;
 }
@@ -658,6 +659,11 @@ main {
   right: 18px;
 }
 
+.route-services {
+  top: 18px;
+  right: 18px;
+}
+
 .route-contact {
   top: 18px;
   right: 18px;
@@ -838,6 +844,7 @@ main {
 .focus-card,
 .experience-panel,
 .expertise-panel,
+.services-panel,
 .contact-panel {
   padding: 28px;
 }
@@ -1032,6 +1039,30 @@ main {
   padding: 18px;
 }
 
+.services-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.service-card {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--panel);
+}
+
+.service-card h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  font-family: "Orbitron", "Space Grotesk", sans-serif;
+  text-transform: uppercase;
+}
+
+.service-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .contact-grid {
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
 }
@@ -1067,6 +1098,7 @@ main {
   .workflow-grid,
   .download-grid,
   .expertise-grid,
+  .services-grid,
   .telemetry-rack {
     grid-template-columns: 1fr;
   }
@@ -1120,6 +1152,7 @@ main {
   .focus-card,
   .experience-panel,
   .expertise-panel,
+  .services-panel,
   .contact-panel {
     padding: 20px;
   }
